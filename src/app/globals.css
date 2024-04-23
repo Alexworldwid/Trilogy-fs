@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grandma {
+    background-image: url('/vacationImage/grandma-and-child.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+}
+#hero1 {
+    background-image: url('/vacationImage/Vacation2.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+}
+#hero-2 {
+    background-image: url('/vacationImage//istockphoto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+#hero3 {
+    background-image: url('/vacationImage/bleck-family.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+
+#hero4 {
+    background-image: url('/vacationImage/grad-college.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+
+#hero5 {
+    background-image: url('/vacationImage/beach-Vacay.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+#hero6 {
+    background-image: url('/vacationImage/family-laughing.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+
+#hero7 {
+    background-image: url('/vacationImage/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+#hero8 {
+    background-image: url('/image/premium_photo-1666299752506-ec79cc93cf04.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
