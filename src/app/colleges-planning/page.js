@@ -12,7 +12,7 @@ const CollegePlanning = () => {
 
             <main className='w-full'>
                 <section id='hero4' className='flex flex-col justify-center items-center p-4'>
-                    <h1 className='text-slate-200 font-semibold text-center text-4xl'>COLLEGE & EDUCATION PLANNING</h1>
+                    <h1 className='text-[#252424] font-semibold text-center text-4xl'>COLLEGE & EDUCATION PLANNING</h1>
                     <div className='bg-[rgba(255,255,255,0.8)] p-4 mt-5 max-w-[1200px]' >
                         <h2 className='text-center text-3xl mb-6 font-semibold md:text-4xl'>A Team Dedicated To Your Education Plans</h2>
                         <p className='text-[#007d8a] text-xl text-center mb-4 md:tex-xl'>We’re more than financial planners, we’re Life Planners.</p>
