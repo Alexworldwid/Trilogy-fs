@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
           <FaPlay className="mx-auto text-white border-white" />
         </button>
         {openForm && (
-        <Form handleCloseForm={handleCloseForm} openForm={openForm} />
+        <Form  handleCloseForm={handleCloseForm} openForm={openForm} />
         )}
         <handleFormContext.Provider value={handleOpenForm}>
             {children}

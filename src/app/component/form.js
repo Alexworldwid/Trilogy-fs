@@ -17,7 +17,7 @@ const Form = ({ handleCloseForm, openForm }) => {
     }
     
     return (
-        <div id='form-container' className={`transition-all fixed top-[15%] left-0 overflow-y-auto duration-1000 ease-in-out w-full h-[70%] md:w-[500px] md:left-[15%] lg:left-[25%] xl:left-[35%]  my-auto bg-white z-50 flex flex-col justify-center items-center`}>
+        <div id='form-container' className={`transition-all fixed top-[15%] left-0 overflow-y-auto duration-1500 ease-in-out w-full h-[70%] md:w-[500px] md:left-[15%] lg:left-[25%] xl:left-[35%]  my-auto bg-white z-50 flex flex-col justify-center items-center ${openForm ? 'flex' : 'hidden'}`}>
             <div className='mt-4 p-4 overflow-y-auto'>
                 <div className='items-end flex flex-col mr-4'><FaTimes className='text-2xl' onClick={handleCloseFormClick} /></div>
                 <h2 className='text-center mt-3 mb-4'>Get Started on Your <i>Financial Life Plan Today</i></h2>
