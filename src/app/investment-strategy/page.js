@@ -15,7 +15,7 @@ const InvestmentStrategy = () => {
 
           <main className='w-full' >
             <section id='hero3' className='flex flex-col justify-center p-4'>
-                <h1 className='text-center mb-6 text-Black font-bold text-4xl'>INVESTMENT STRATEGIES</h1>
+                <h1 className='text-center mb-6 text-Black font-bold text-4xl mt-3'>INVESTMENT STRATEGIES</h1>
                 <div className='bg-[rgba(255,255,255,0.7)] p-4 flex flex-col items-center '
                 >
                     <h2 className='text-3xl text-center font-semibold mb-4'>Developing An Investment Strategy To Pursue Your Goals</h2>
