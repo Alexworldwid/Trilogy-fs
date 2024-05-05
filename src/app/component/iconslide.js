@@ -26,7 +26,7 @@ export default function Iconslide() {
 
 
   return (
-      <div id='icon-slide' className='flex justify-between w-full overflow-hidden'>
+      <div id='icon-slide' className='flex justify-between w-full col-start-2 col-end-4 overflow-hidden md:col-end-10 md:col-start-3 xl:col-start-2'>
           <Image className="mr-5"  src={forbes } width={100} height={50} alt="fprbes" quality={100} />
           <Image className="mr-5"   src={ FA} width={100} height={50} alt="FA" quality={100} />
           <Image className="mr-5"   src={usaToday } width={100} height={50} alt="usa-today" quality={100} />
