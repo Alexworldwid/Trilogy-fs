@@ -16,10 +16,7 @@ export const metadata = {
 const FourZeroOne = () => {
     return (
         <main className='relative w-full'>
-            <Head>
-                <title>401(k) & Retirement Planning</title>
-            </Head>
-
+            
             <section id='hero-2' className='flex flex-col items-center justify-center  top-[2%] xl:left-[10%] opacity-80'>
                 <h1 className='text-4xl font-semibold text-center text-white md:text-6xl'>FINANCIAL PLANNING FOR RETIREMENT</h1>
                 <div className='mt-4 lg:mt-10 flex flex-col max-w-[1200px] items-center bg-[#eae9e9] p-8'>
