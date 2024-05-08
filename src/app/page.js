@@ -16,12 +16,6 @@ import { useEffect } from "react";
 
 
 
-export const metadata = {
-  title: 'Trilogy | Home',
-  description: 'Homepage to Trilogy',
-};
-
-
 export default function Home() {
 
   useEffect(() => {

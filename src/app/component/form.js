@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { motion, spring } from 'framer-motion';
 
 
-const Form = ({ handleCloseForm, openForm }) => {
+const Form = ({ handleCloseForm, openForm, formRef }) => {
     // initialize form state
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -16,9 +16,10 @@ const Form = ({ handleCloseForm, openForm }) => {
     const handleCloseFormClick = () => {
         handleCloseForm();
     }
+
     
     return (
-        <motion.div id='form-container'
+        <motion.div id='form-container' ref={formRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7 }} className={`transition-all fixed top-[15%] left-0 overflow-y-auto duration-1500 ease-in-out w-full h-[70%] md:w-[500px] md:left-[15%] lg:left-[25%] xl:left-[35%]  my-auto bg-white z-50 flex flex-col justify-center items-center ${openForm ? 'flex' : 'hidden'}`}>

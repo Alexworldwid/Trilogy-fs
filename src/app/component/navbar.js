@@ -7,7 +7,7 @@ import Trilogy from "/public/image/logo-main.png";
 import Link from "next/link";
 import DownIcon from "/public/image/icon-arrow-down.svg";
 import UpIcon from "/public/image/icon-arrow-up.svg";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 const Navbar = ({ handleOpenForm }) => {
@@ -36,13 +36,31 @@ const Navbar = ({ handleOpenForm }) => {
         setLogin(!login)
     }
 
+    const menuRef = useRef(null);
+    
+    useEffect(() => {
+        const handleCloseMenulick = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setMenuOpen(false);
+                setourService(false);
+                setAbout(false)
+                console.log(menuRef.current)
+            }
+        }
+        document.addEventListener('mousedown', handleCloseMenulick);
+
+        return () => {
+            document.removeEventListener('mousedown', handleCloseMenulick);
+        }
+    }, [menuopen])
+
     return ( 
         <header className="w-full" >
           <div className="flex justify-end gap-6 items-center bg-[#002843] p-4 md:px-[100px] ">
-            <FaSearch className="text-white font-lg text-[3vw] lg:text-[2vw] " />
+            {/* <FaSearch className="text-white font-lg text-[3vw] lg:text-[2vw] " />
             <FaFacebook className="text-white text-[3vw] lg:text-[2vw]" />
             <FaTwitter className="text-white text-[3vw] lg:text-[2vw]" />
-            <FaLinkedin className="text-white text-[3vw] lg:text-[2vw]" />
+            <FaLinkedin className="text-white text-[3vw] lg:text-[2vw]" /> */}
             <Image className="w-1/6 h-auto lg:w-40" src={brokerCheck}  alt="brokerProps" quality={100}  />
           </div>
 
@@ -51,7 +69,7 @@ const Navbar = ({ handleOpenForm }) => {
               <Link onClick={handleCloseMenu} href='/'><Image className="w-3/6 h-auto lg:w-32" src={Trilogy} alt="trilogy-logo" quality={100} /></Link>
             </div>
 
-            <ul  className="relative hidden gap-5 pr-4 text-sm lg:flex lg:justify-between lg:text-md">
+            <ul ref={menuRef}  className="relative hidden gap-5 pr-4 text-sm lg:flex lg:justify-between lg:text-md">
               <li  className="mb-4 text-slate-200 " onClick={handleOpenForm}>
                   <Link className="flex items-center gap-x-3" href="" >OUR ADVISORS  </Link>
               </li>
@@ -87,7 +105,7 @@ const Navbar = ({ handleOpenForm }) => {
             </ul>
 
            
-                <ul className={`lg:hidden absolute bg-[#002843] -left-0 top-[50px] md:top-[70px] md:pl-28 py-8 px-4 0 w-full transition-display duration-700 ease-in-out z-40   ${menuopen ? 'block' : 'hidden'}`}>
+                <ul ref={menuRef} className={`lg:hidden absolute bg-[#002843] -left-0 top-[50px] md:top-[70px] md:pl-28 py-8 px-4 0 w-full transition-display duration-700 ease-in-out z-40   ${menuopen ? 'block' : 'hidden'}`}>
                     <li onClick={handleOpenForm} className="mb-4 text-slate-200 ">
                         <Link className="flex items-center gap-x-3" href="" >OUR ADVISORS </Link>
                 

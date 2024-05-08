@@ -5,7 +5,7 @@ import React from "react";
 import Navbar from "./component/navbar"
 import Footer from "./component/footer";
 import { FaPlay } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Form from "./component/form";
 import { motion } from "framer-motion";
 import "./globals.css";
@@ -27,6 +27,23 @@ export default function RootLayout({ children }) {
     setOpenForm(false);
   };
 
+  const formRef = useRef(null);
+
+    useEffect(() => {
+        const handleOutsideFormClick = (event) => {
+            if (formRef.current && !formRef.current.contains(event.target)) {
+                setOpenForm(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handleOutsideFormClick);
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideFormClick);
+        }
+    }, [])
+    
+
   
   return (
     <html lang="en">
@@ -40,7 +57,7 @@ export default function RootLayout({ children }) {
           <FaPlay className="mx-auto text-white border-white" />
         </button>
         {openForm && (
-        <Form  handleCloseForm={handleCloseForm} openForm={openForm} />
+        <Form handleCloseForm={handleCloseForm} openForm={openForm} formRef={formRef} />
         )}
         <handleFormContext.Provider value={handleOpenForm}>
           <motion.div>
